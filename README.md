@@ -1,6 +1,6 @@
 # Generating SROI^- Ontologies via Knowledge Graph Query Embedding Learning.
 
-This repository contains the implementation of **AConE** (Angle Cone Embedding), a method for complex query answering over knowledge graphs using cone-based geometric embeddings. The model learns to embed entities and relations as points in a high-dimensional space, representing queries as cone structures for efficient reasoning.
+This repository contains the implementation of **AConE**, a method for complex query answering over knowledge graphs using cone-based geometric embeddings. The model learns to embed entities and relations as points in a high-dimensional space, representing queries as cone structures for efficient reasoning.
 
 ## Overview
 

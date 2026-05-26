@@ -11,12 +11,12 @@ AConE addresses the challenge of answering complex logical queries over incomple
   - Path queries (1p, 2p, 3p)
   - Intersection queries (2i, 3i)
   - Union queries (2u-DNF, 2u-DM)
-  - Negation queries (2in, 3in, 2u variants)
+  - Negation queries (2in, 3in, inp, pin, pni)
   - Compositions (ip, pi, inp, pin, pni, up)
   
 - **Geometric Embedding**: Uses angle and radius dimensions with cone-based representations for expressive query embeddings
 - **Multi-GPU Support**: Configured for distributed training
-- **Multiple Datasets**: Pre-configured for NELL-betae and WN18RR-QA benchmarks
+- **Multiple Datasets**: Pre-configured for NELL-betae and WN18RR-QA benchmarks (available to download from the [link](https://drive.google.com/drive/folders/1mA5qt837IgD9DI0fqN7Wljh2O0q27x2j?usp=sharing))
 
 ## Project Structure
 
@@ -126,34 +126,6 @@ Key arguments for `main.py`:
 | `--tasks` | all | Tasks to train on (connected by dots) |
 | `--seed` | 0 | Random seed |
 
-## Code Components
-
-### models.py
-Contains the core model architecture:
-- **AngleScale**: Handles angle and radius scaling for embeddings
-- Utility functions for complex number conversions (Cartesian ↔ Polar)
-- Distance computation functions for cone-based reasoning
-
-### dataloader.py
-Dataset utilities:
-- **TestDataset**: For evaluation with all entities as negative samples
-- **TrainDataset**: For training with sampled negative entities
-- **SingledirectionalOneShotIterator**: Efficient iteration over query batches
-
-### main.py
-Training and evaluation pipeline:
-- Argument parsing and configuration
-- Model initialization and training loop
-- Validation and testing procedures
-- Checkpoint saving and loading
-- TensorBoard logging
-
-### util.py
-Helper functions:
-- `set_global_seed()`: Set random seeds for reproducibility
-- `eval_tuple()`: Parse query structures
-- `parse_time()`: Timestamp generation
-- List/tuple conversion utilities
 
 ## Query Types
 
